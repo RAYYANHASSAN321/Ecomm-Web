@@ -1,0 +1,9 @@
+Create DATABASE ecomm;
+
+Create table category (c_id int PRIMARY key AUTO_INCREMENT , c_name varchar(100) );
+
+Create TABLE product (p_id int PRIMARY KEY AUTO_INCREMENT , p_name varchar(100) , p_price int  , p_quantity int ,p_image varchar(255) , p_category int , FOREIGN key(p_category) REFERENCES category (c_id) );
+
+Create table admin(a_id int PRIMARY key AUTO_INCREMENT , a_name varchar(100) , a_email varchar(100) , a_password varchar(14));
+
+CREATE TABLE customer (c_id int PRIMARY KEY AUTO_INCREMENT , c_name varchar(100) , c_contact varchar(100) , c_email varchar(100) , c_password varchar(14) , c_address varchar(100));
